@@ -12,7 +12,7 @@ services:
       - .:/code
     ports:
       - 8000:8000
-    command: flask --app src.flask_docker.app:app run --host 0.0.0.0 --port 8000 --debug
+    command: flask --app flask_docker.app:app run --host 0.0.0.0 --port 8000 --debug
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8000/status"]
       interval: 60s

@@ -10,7 +10,10 @@ shell:
 	@docker compose exec -it api /bin/bash
 
 fmt:
-	@docker compose exec -it api bash -c "black ."
+	@docker compose run --rm api bash -c "black ."
 
 lint:
-	@docker compose exec -it api bash -c "ruff ."
+	@docker compose run --rm api bash -c "ruff ."
+
+test:
+	@docker compose run --rm api bash -c "pytest tests/"
