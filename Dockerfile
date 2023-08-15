@@ -13,5 +13,5 @@ RUN pip install -r requirements.dev.txt
 # Copy the application files
 COPY . .
 
-# TODO: Set the web server command
-CMD ["tail", "-f", "/dev/null"]
+# Set the web server command
+CMD ["gunicorn", "-c", "gunicorn.conf.py"]

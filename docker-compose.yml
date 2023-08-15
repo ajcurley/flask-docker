@@ -1,0 +1,19 @@
+version: "3.9"
+
+networks:
+  default:
+    name: github-dev
+    external: true
+
+services:
+  api:
+    image: flask-docker:latest
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8000/status"]
+      interval: 180s
+      timeout: 10s
+      retries: 5
