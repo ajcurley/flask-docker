@@ -5,3 +5,6 @@ network:
 
 image:
 	@docker build -t ${APP}:latest .
+
+shell:
+	@docker compose exec -it api /bin/bash

@@ -3,6 +3,9 @@ FROM python:3.10-slim
 # Set the application working directory
 WORKDIR /code
 
+# Install the system dependencies
+RUN apt-get update && apt-get install --no-install-recommends -y curl
+
 # Install the Python dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
