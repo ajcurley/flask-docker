@@ -8,3 +8,9 @@ image:
 
 shell:
 	@docker compose exec -it api /bin/bash
+
+fmt:
+	@docker compose exec -it api bash -c "black ."
+
+lint:
+	@docker compose exec -it api bash -c "ruff ."

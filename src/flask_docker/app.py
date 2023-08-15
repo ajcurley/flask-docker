@@ -22,7 +22,7 @@ def randomize():
         lower = int(lower)
     except ValueError:
         return {"detail": "'lower' must be an integer"}, 400
-    
+
     try:
         upper = int(upper)
     except ValueError:

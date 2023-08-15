@@ -4,17 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flask_docker"
-version = 0.1.0
-authors = [
-  { name = "Alex Curley", email = "acurley31@gmail.com" },
-]
+version = "0.1.0"
 description = "Flask API containerized with Docker and deployed to AWS using Terraform"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
   "Programming Language :: Python :: 3",
-  "Operating System :: OS Independent",
+  "Operating System :: OS Independent"
 ]
 
 [project.urls]
 "Source Code" = "github.com/ajcurley/flask-docker"
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
