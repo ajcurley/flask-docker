@@ -14,3 +14,4 @@ This project has a few useful development commands to ensure code quality and fa
 * `make shell` to access the bash shell inside the Docker container
 * `make fmt` to run the code formatter (black)
 * `make lint` to run the linter (ruff)
+* `make test` to run the unit tests (pytest)
