@@ -1,4 +1,4 @@
-Flask API containerized with Docker deployed to AWS using Terraform
+Flask API containerized with Docker
 
 ## Getting started
 To get started with `flask-docker` for local development, follow the instructions below. This requires you to have Docker/Docker Compose installed in addition to `make` to use the commands.
